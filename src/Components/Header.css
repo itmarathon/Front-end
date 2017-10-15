@@ -1,0 +1,23 @@
+.wrapHeader {
+  height: 40px;
+  background-color: #5B6D7F;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #CFE7FF ;
+}
+.logo {
+  margin-left: 50px;
+}
+.sign {
+  margin-right: 50px;
+}
+.sign a {
+  color: #CFE7FF;
+  text-decoration: none;
+  padding-right: 5px;
+}
+.signUp {
+  margin-left: 5px;
+}
