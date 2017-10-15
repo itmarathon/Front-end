@@ -1,8 +1,10 @@
 import React from "react";
-import './Component.css';
+import './Footer.css';
 
-var Navbar = () => (
-  <div></div>
+var Footer = () => (
+  <div className="footer">
+    <p>Главная</p>
+  </div>
 );
 
-export default Navbar;
+export default Footer;
