@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var path = require('path');
 
 module.exports = {
   entry: [
@@ -13,6 +12,12 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        use: 'eslint-loader',
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
