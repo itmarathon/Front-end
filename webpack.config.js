@@ -10,6 +10,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
 
+
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+
   module: {
     rules: [
       {
