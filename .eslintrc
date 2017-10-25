@@ -37,6 +37,7 @@
     "react/jsx-no-undef": "warn",
     "react/jsx-uses-react": "warn",
     "react/jsx-uses-vars": "warn",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "semi": "warn"
   }
 }
