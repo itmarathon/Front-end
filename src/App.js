@@ -6,12 +6,12 @@ class App extends Component {
   render() {
     return (
       <div>
-      <div className='App'>
-        <Header />
-        <p>Hello, World!</p>
-        <div id='indent'></div>
-      </div>
-      <Footer />
+        <div className='App'>
+          <Header />
+          <p>Hello, World!</p>
+          <div id='indent' />
+        </div>
+        <Footer />
       </div>
     );
   }

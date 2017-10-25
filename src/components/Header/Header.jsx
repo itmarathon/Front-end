@@ -5,9 +5,9 @@ const Header = () => (
   <div className='wrapHeader'>
     <div className='logo'>IT-Marathon</div>
     <div className='sign'>
-      <a className='signIn' href='#'>Регистрация</a>
+      <p>Регистрация</p>
       <span>/</span>
-      <a className='signUp' href='#'>Вход</a>
+      <p>Вход</p>
     </div>
   </div>
 );

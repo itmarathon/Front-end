@@ -17,6 +17,7 @@
     "react"
   ],
   "rules": {
+    "linebreak-style": 0,
     "no-const-assign": "warn",
     "no-this-before-super": "warn",
     "no-undef": "warn",
