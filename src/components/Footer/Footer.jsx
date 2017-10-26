@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import './Footer.css';
 
-var Footer = () => (
+const Footer = () => (
   <div className="footer">
     <p>Главная</p>
   </div>

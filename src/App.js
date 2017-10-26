@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import Header from './Components/Header';
-import Footer from './Components/Footer'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import SignIn from './components/SignIn/signIn';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-      <div className="App">
-        <Header />
-        <p>Hello, World!</p>
-        <div id="indent"></div>
-      </div>
-      <Footer />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <div className="App">
+      <Header />
+      <p>Hello, World!</p>
+      <SignIn />
+      <div id="indent" />
+    </div>
+    <Footer />
+  </div>
+);
 
 export default App;

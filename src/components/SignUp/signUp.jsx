@@ -1,5 +1,5 @@
 import React from "react";
-import './signIn.css';
+import './signUp.css';
 
 var Navbar = () => (
   <div></div>
