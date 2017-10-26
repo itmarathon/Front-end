@@ -34,6 +34,7 @@
     "eol-last": "off",
     "quotes": ["warn", "single"],
     "jsx-quotes": ["warn", "prefer-double"],
+    "jsx-a11y/anchor-is-valid": 0,
     "react/jsx-no-undef": "warn",
     "react/jsx-uses-react": "warn",
     "react/jsx-uses-vars": "warn",

@@ -1,16 +1,17 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import SignIn from './components/SignIn/signIn';
+import HomePage from './containers/HomePage';
+import SignInPage from './containers/SignInPage';
 
 const App = () => (
   <div>
     <div className="App">
       <Header />
-      <p>Hello, World!</p>
-      <SignIn />
-      <div id="indent" />
+      <Route path="/" exact component={HomePage} />
+      <Route path="/sign-in" exact component={SignInPage} />
     </div>
     <Footer />
   </div>
