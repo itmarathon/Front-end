@@ -1,6 +1,6 @@
 import React from 'react';
 import './signIn.css';
-import Button from '../Button';
+import Button from '../Button/Button';
 
 const SignIn = () => (
   <div>
