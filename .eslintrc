@@ -1,0 +1,43 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "linebreak-style": 0,
+    "no-const-assign": "warn",
+    "no-this-before-super": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-unused-vars": "warn",
+    "constructor-super": "warn",
+    "valid-typeof": "warn",
+    "no-debugger": "off",
+    "no-console": "off",
+    "new-cap": "off",
+    "strict": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
+    "eol-last": "off",
+    "quotes": ["warn", "single"],
+    "jsx-quotes": ["warn", "prefer-single"],
+    "react/jsx-no-undef": "warn",
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "warn",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "semi": "warn"
+  }
+}
