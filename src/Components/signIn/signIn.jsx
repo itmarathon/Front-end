@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import './signIn.css';
 import Button from '../Button';
 
-var SignIn = () => (
+const SignIn = () => (
   <div>
-      <Button label='Войти'/>
+    <Button label="Войти" />
   </div>
 );
 

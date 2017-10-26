@@ -33,7 +33,7 @@
     "no-use-before-define": "off",
     "eol-last": "off",
     "quotes": ["warn", "single"],
-    "jsx-quotes": ["warn", "prefer-single"],
+    "jsx-quotes": ["warn", "prefer-double"],
     "react/jsx-no-undef": "warn",
     "react/jsx-uses-react": "warn",
     "react/jsx-uses-vars": "warn",
