@@ -3,7 +3,7 @@ import SignInForm from '../../components/SignInForm';
 
 const SignInPage = () => (
   <div className="SignInPage">
-    <p>Sign in!</p>
+    <p>Sign in page!</p>
     <SignInForm />
   </div>
 );

@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HomePage from './containers/HomePage';
 import SignInPage from './containers/SignInPage';
 
+
 const App = () => (
   <div>
     <div className="App">
