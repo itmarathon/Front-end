@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Filtres,
+  Filters,
   FlatList,
 } from '../../components';
 
@@ -33,7 +33,7 @@ const mockFlats = [
 
 class HomePage extends Component {
   state = {
-    filtres: {
+    filters: {
       city: '',
     },
     data: {
@@ -44,16 +44,16 @@ class HomePage extends Component {
   handlerFiltersChange = (e) => {
     const fieldName = e.target.name;
     const fieldValue = e.target.value;
-    const { filtres } = this.state;
+    const { filters } = this.state;
 
-    filtres[fieldName] = fieldValue;
-    this.setState({ filtres });
+    filters[fieldName] = fieldValue;
+    this.setState({ filters });
   }
 
   handleFilterSubmit = (e) => {
     e.preventDefault();
     let filtredFlats = this.state.data.flats;
-    filtredFlats = mockFlats.filter(flat => flat.city.includes(this.state.filtres.city));
+    filtredFlats = mockFlats.filter(flat => flat.city.includes(this.state.filters.city));
     const { data } = this.state;
     data.flats = filtredFlats;
     this.setState({ data });
@@ -62,8 +62,8 @@ class HomePage extends Component {
   render() {
     return (
       <div className="HomePage">
-        <Filtres
-          city={this.state.filtres.city}
+        <Filters
+          city={this.state.filters.city}
           onChange={this.handlerFiltersChange}
           onSubmit={this.handleFilterSubmit}
         />

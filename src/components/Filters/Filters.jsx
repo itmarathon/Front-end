@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Filtres = ({
+const Filters = ({
   city,
   onChange,
   onSubmit,
 }) => (
-  <div className="Filtres">
+  <div className="Filters">
     <form onSubmit={onSubmit} onChange={onChange}>
       City: <input name="city" value={city} />
     </form>
   </div>
 );
 
-Filtres.propTypes = {
+Filters.propTypes = {
   city: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
 
-export default Filtres;
+export default Filters;
