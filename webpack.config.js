@@ -1,9 +1,9 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   entry: [
     'webpack-hot-middleware/client',
-    './src'
+    './src',
   ],
 
   plugins: [
@@ -12,7 +12,7 @@ module.exports = {
 
 
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
 
   module: {
@@ -26,17 +26,26 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: 'babel-loader',
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif|ttf|woff2|woff|eot|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
+      },
+    ],
   },
 
   output: {
     filename: 'bundle.js',
-    publicPath: '/static/js/'
-  }
+    publicPath: '/static/js/',
+  },
 };

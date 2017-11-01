@@ -1,0 +1,29 @@
+.ui.label {
+  position: relative;
+  background-color: inherit;
+}
+.ui.form .field .ui.input input, .ui.form .fields .field .ui.input input {
+  width: 300px;
+  border-radius: 3px;
+  border-color: grey;
+  height: 38px;
+
+}
+form.ui.form {
+  margin: 100px auto;
+  background-color: inherit;
+}
+.emailTitle, .passwordTitle  {
+  font-weight: normal;
+  color: #414250;
+  float: left;
+  margin-bottom: 5px;
+  font-size: 1.3em;
+}
+.ui.green.button, .ui.green.buttons .button {
+  margin-top: 20px;
+  background-color: tomato;
+  width: 300px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
