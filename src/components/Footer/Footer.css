@@ -1,12 +1,18 @@
 div .footer {
-  z-index: 100;
-  display: block;
-  position: absolute;
-  height: 40px;
-  width: 100%;
   margin-top: -40px;
-  padding: 0 0 20px 20px;
-  background-color: #5B6D7F;
-  color: #CFE7FF;
-  font-size: 16px;
+  color: white;
+  height: 40px;
+}
+.left .item .logoTop {
+  font-size: 2em;
+}
+.logoFooter {
+  color: #fff;
+  margin-left: 30px;
+  font-size: 1.5em;
+  margin-top: 0;
+  padding-top: 0;
+}
+a.left.item.logoFooter {
+  color: white;
 }

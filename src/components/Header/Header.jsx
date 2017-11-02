@@ -37,7 +37,7 @@ class Header extends React.Component {
             active={activeItem === 'signIn'}
             onClick={this.handleItemClick}
           >
-            <Button><Link to="/sign-in">Войти</Link></Button>
+            <Button><Link to="/sign-in">Вход</Link></Button>
           </Menu.Item>
         </Menu>
       </Menu>
