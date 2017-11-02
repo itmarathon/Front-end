@@ -7,7 +7,7 @@ import './Header.css';
 class Header extends React.Component {
   state = {};
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
     const { activeItem } = this.state;
