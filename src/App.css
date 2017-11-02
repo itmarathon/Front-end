@@ -9,7 +9,7 @@
   /* z-index: 10; */
   text-align: center;
   background-color: white;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   margin: 0;
   padding: 0px;
   position: relative;

@@ -1,7 +1,5 @@
 div .footer {
-  margin-top: -40px;
-  color: white;
-  height: 40px;
+  min-height: calc(100vh - 40px);
 }
 .left .item .logoTop {
   font-size: 2em;
