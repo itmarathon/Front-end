@@ -86,4 +86,3 @@ SignInForm.propTypes = {
 };
 
 export default SignInForm;
-
