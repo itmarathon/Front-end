@@ -64,6 +64,10 @@ class HomePage extends Component {
       <div className="HomePage">
         <Filters
           city={this.state.filters.city}
+          type={this.state.filters.type}
+          rooms={this.state.filters.rooms}
+          price={this.state.filters.sort}
+          sort={this.state.filters.sort}
           onChange={this.handlerFiltersChange}
           onSubmit={this.handleFilterSubmit}
         />
