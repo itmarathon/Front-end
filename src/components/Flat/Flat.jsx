@@ -23,6 +23,6 @@ Flat.propTypes = {
   city: PropTypes.string.isRequired,
   rooms: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-}
+};
 
 export default Flat;
