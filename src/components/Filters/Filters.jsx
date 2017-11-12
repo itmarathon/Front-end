@@ -9,8 +9,8 @@ const Filters = ({
   <div className="Filters">
     <form onSubmit={onSubmit} onChange={onChange}>
       Где:
-      <select>
-        {cities.map(city => <option id={city}>{city}</option>)}
+      <select name="city">
+        {cities.map(city => <option key={city}>{city}</option>)}
       </select>
       Квартира/дом:
       <select>
