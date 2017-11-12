@@ -4,6 +4,8 @@ import {
   FlatList,
 } from '../../components';
 
+import Api from '../../services/api';
+
 const mockFlats = [
   {
     id: '1',
@@ -38,7 +40,17 @@ class HomePage extends Component {
     },
     data: {
       flats: mockFlats,
+      cities: [],
     },
+  }
+
+  async componentWillMount() {
+    const { data } = this.state;
+
+    const cities = await Api.getCities();
+
+    data.cities = cities;
+    this.setState({ data });
   }
 
   handlerFiltersChange = (e) => {
@@ -63,7 +75,7 @@ class HomePage extends Component {
     return (
       <div className="HomePage">
         <Filters
-          city={this.state.filters.city}
+          cities={this.state.data.cities}
           type={this.state.filters.type}
           rooms={this.state.filters.rooms}
           price={this.state.filters.sort}
