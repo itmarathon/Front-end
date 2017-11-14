@@ -41,6 +41,7 @@ class HomePage extends Component {
     data: {
       flats: mockFlats,
       cities: [],
+      types: [],
     },
   }
 
@@ -48,8 +49,10 @@ class HomePage extends Component {
     const { data } = this.state;
 
     const cities = await Api.getCities();
+    const types = await Api.getTypes();
 
     data.cities = cities;
+    data.types = types;
     this.setState({ data });
   }
 
@@ -76,10 +79,7 @@ class HomePage extends Component {
       <div className="HomePage">
         <Filters
           cities={this.state.data.cities}
-          type={this.state.filters.type}
-          rooms={this.state.filters.rooms}
-          price={this.state.filters.sort}
-          sort={this.state.filters.sort}
+          types={this.state.data.types}
           onChange={this.handlerFiltersChange}
           onSubmit={this.handleFilterSubmit}
         />
