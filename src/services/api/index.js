@@ -13,7 +13,7 @@ const getCities = async () => {
   return data.cities;
 };
 
-const getTypes = async () => {
+const getRentalTypes = async () => {
   let response;
 
   try {
@@ -57,6 +57,6 @@ const mockFlats = [
 
 export default {
   getCities,
-  getTypes,
+  getRentalTypes,
   getFlats,
 };

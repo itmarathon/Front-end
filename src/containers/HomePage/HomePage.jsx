@@ -12,6 +12,8 @@ import {
 
 class HomePage extends Component {
   componentDidMount() {
+    this.props.getCities();
+    this.props.getRentalTypes();
     this.props.getFlats();
   }
 
@@ -24,13 +26,13 @@ class HomePage extends Component {
   }
 
   render() {
-    const { flats } = this.props;
+    const { flats, cities, rentalTypes } = this.props;
 
     return (
       <div className="HomePage">
         <Filters
-          cities={[]}
-          types={[]}
+          cities={cities}
+          types={rentalTypes}
           onChange={this.handlerFiltersChange}
           onSubmit={this.handleFilterSubmit}
         />
@@ -42,14 +44,22 @@ class HomePage extends Component {
 
 const mapStateToProps = state => ({
   flats: state.flats.data,
+  cities: state.lists.cities,
+  rentalTypes: state.lists.rentalTypes,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
+  getCities: Actions.getCities,
+  getRentalTypes: Actions.getRentalTypes,
   getFlats: Actions.getFlats,
 }, dispatch);
 
 HomePage.propTypes = {
   flats: PropTypes.arrayOf(PropTypes.object),
+  cities: PropTypes.arrayOf(PropTypes.object).isRequired,
+  rentalTypes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  getCities: PropTypes.func.isRequired,
+  getRentalTypes: PropTypes.func.isRequired,
   getFlats: PropTypes.func.isRequired,
 };
 
