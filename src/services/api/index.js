@@ -26,7 +26,37 @@ const getTypes = async () => {
   return data.rentalTypes;
 };
 
+const getFlats = () => mockFlats;
+
+const mockFlats = [
+  {
+    id: '1',
+    img: '/tmp.jpg',
+    title: 'title1',
+    city: 'city1',
+    rooms: 'rooms1',
+    price: '1',
+  },
+  {
+    id: '2',
+    img: '/tmp.jpg',
+    title: 'title2',
+    city: 'city2',
+    rooms: 'rooms2',
+    price: '2',
+  },
+  {
+    id: '3',
+    img: '/tmp.jpg',
+    title: 'titlу3',
+    city: 'city3',
+    rooms: 'rooms3',
+    price: '3',
+  },
+];
+
 export default {
   getCities,
   getTypes,
+  getFlats,
 };

@@ -1,10 +1,9 @@
-import { getFlats as getFlatsApi } from '../services/api';
+/* eslint-disable import/prefer-default-export */
+import Api from '../services/api';
 
-export const setFlatsAction = flats => ({ type: 'SET_FLATS', payload: flats });
+const setFlatsAction = flats => ({ type: 'SET_FLATS', payload: flats });
 
-export const getFlats = () => (dispatch) => {
-  return getFlatsApi()
-    .then((flats) => {
-      dispatch(setFlatsAction(flats));
-    });
+export const getFlats = () => async (dispatch) => {
+  const flats = Api.getFlats();
+  dispatch(setFlatsAction(flats));
 };
