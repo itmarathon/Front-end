@@ -12,10 +12,13 @@ const store = configureStore();
 
 const App = () => (
   <Provider store={store}>
-    <div className="App">
-      <Header />
-      <Route path="/" exact component={HomePage} />
-      <Route path="/sign-in" exact component={SignInPage} />
+    <div>
+      <div className="App">
+        <Header />
+        <Route path="/" exact component={HomePage} />
+        <Route path="/sign-in" exact component={SignInPage} />
+      </div>
+      <div id="indent" />
       <Footer />
     </div>
   </Provider>
