@@ -13,7 +13,7 @@ const Filters = ({
         {cities.map(city => <option key={city}>{city}</option>)}
       </select>
       Тип:
-      <select name="rentalType">
+      <select name="type">
         {rentalTypes.map(city => <option key={city}>{city}</option>)}
       </select>
     </form>

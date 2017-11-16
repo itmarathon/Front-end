@@ -1,6 +1,6 @@
 export const initialState = {
   city: '',
-  rentalType: '',
+  type: '',
 };
 
 const flats = (state = initialState, action) => {
