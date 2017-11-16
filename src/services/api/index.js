@@ -26,34 +26,18 @@ const getRentalTypes = async () => {
   return data.rentalTypes;
 };
 
-const getFlats = () => mockFlats;
+const getFlats = async () => {
+  let response;
 
-const mockFlats = [
-  {
-    id: '1',
-    img: '/tmp.jpg',
-    title: 'title1',
-    city: 'Гродно',
-    rooms: 'rooms1',
-    price: '1',
-  },
-  {
-    id: '2',
-    img: '/tmp.jpg',
-    title: 'title2',
-    city: 'Минск',
-    rooms: 'rooms2',
-    price: '2',
-  },
-  {
-    id: '3',
-    img: '/tmp.jpg',
-    title: 'titlу3',
-    city: 'city3',
-    rooms: 'rooms3',
-    price: '3',
-  },
-];
+  try {
+    response = await fetch(`${apiUrl}/api/apartment?all=true&page=1&perPage=20`);
+  } catch (e) {
+    console.error(e);
+  }
+
+  const { data } = await response.json();
+  return data.apartments;
+};
 
 export default {
   getCities,
