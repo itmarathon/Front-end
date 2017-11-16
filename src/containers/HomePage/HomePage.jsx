@@ -36,8 +36,8 @@ class HomePage extends Component {
         if (!flat[filter].includes(filters[filter])) {
           return false;
         }
-        return true;
       }
+      return true;
     });
   }
 
@@ -47,6 +47,7 @@ class HomePage extends Component {
       cities,
       rentalTypes,
       filters,
+      isLoading,
     } = this.props;
 
     const filtredFlats = this.filter(flats, filters);
@@ -59,7 +60,7 @@ class HomePage extends Component {
           onChange={this.handlerFiltersChange}
           onSubmit={this.handleFilterSubmit}
         />
-        <FlatList flats={filtredFlats} />
+        { isLoading ? 'Loading...' : <FlatList flats={filtredFlats} /> }
       </div>
     );
   }
@@ -67,6 +68,7 @@ class HomePage extends Component {
 
 const mapStateToProps = state => ({
   flats: state.flats.data,
+  isLoading: state.flats.isLoading,
   cities: state.lists.cities,
   rentalTypes: state.lists.rentalTypes,
   filters: state.filters,
@@ -81,6 +83,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 
 HomePage.propTypes = {
   flats: PropTypes.arrayOf(PropTypes.object),
+  isLoading: PropTypes.bool.isRequired,
   cities: PropTypes.arrayOf(PropTypes.object).isRequired,
   rentalTypes: PropTypes.arrayOf(PropTypes.object).isRequired,
   filters: PropTypes.shape(PropTypes.object),
