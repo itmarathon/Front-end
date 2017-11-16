@@ -1,6 +1,7 @@
 div .footer {
   z-index: 100;
-  display: block;
+  /* display: block; */
+  display: none;
   position: absolute;
   height: 40px;
   width: 100%;

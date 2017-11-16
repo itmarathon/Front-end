@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 
 const Filters = ({
   onChange,
-  onSubmit,
   cities,
-  types,
+  rentalTypes,
 }) => (
   <div className="Filters">
-    <form onSubmit={onSubmit} onChange={onChange}>
+    <form onChange={onChange}>
       Где:
       <select name="city">
         {cities.map(city => <option key={city}>{city}</option>)}
       </select>
       Тип:
-      <select name="type">
-        {types.map(city => <option key={city}>{city}</option>)}
+      <select name="rentalType">
+        {rentalTypes.map(city => <option key={city}>{city}</option>)}
       </select>
-      <button type="submit">Применить</button>
     </form>
   </div>
 );
 
 Filters.propTypes = {
   onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
   cities: PropTypes.arrayOf(PropTypes.string).isRequired,
-  types: PropTypes.arrayOf(PropTypes.string).isRequired,
+  rentalTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Filters;
