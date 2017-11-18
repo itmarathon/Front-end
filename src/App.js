@@ -17,8 +17,8 @@ const App = () => (
         <Header />
         <Route path="/" exact component={HomePage} />
         <Route path="/sign-in" exact component={SignInPage} />
+        <div id="indent" />
       </div>
-      <div id="indent" />
       <Footer />
     </div>
   </Provider>
