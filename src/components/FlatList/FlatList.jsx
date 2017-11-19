@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Flat from '../Flat';
+import './FlatList.css';
 
 const FlatList = ({ flats }) => (
   <div className="FlatList">
