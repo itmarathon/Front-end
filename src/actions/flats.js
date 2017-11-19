@@ -10,7 +10,8 @@ const setRentalTypesAction = cities => ({ type: 'SET_RENTAL_TYPES_LIST', payload
 export const getFlats = () => (dispatch) => {
   dispatch(getFlatsRequestAction());
   return Api.getFlats().then(flats => {
-    dispatch(setFlatsAction(flats));
+    const adaptedFlats = flatsAdapter(flats);
+    dispatch(setFlatsAction(adaptedFlats));
     dispatch(getFlatsSuccessAction());
   });
 };
@@ -24,5 +25,14 @@ export const getCities = () => (dispatch) => {
 export const getRentalTypes = () => (dispatch) => {
   return Api.getRentalTypes().then(types => {
     dispatch(setRentalTypesAction(types));
+  });
+};
+
+/* eslint-disable prefer-destructuring */
+const flatsAdapter = (flats) => {
+  return flats.map(flat => {
+    const newFlat = flat;
+    newFlat.img = flat.photos[0];
+    return newFlat;
   });
 };
