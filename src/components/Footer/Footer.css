@@ -7,8 +7,8 @@ div .footer {
   width: 100%;
   margin-top: -40px;
   padding: 0 0 20px 20px;
-  background-color: #5B6D7F;
-  color: #CFE7FF;
+  background-color: tomato;
+  color: white;
   font-size: 16px;
   /* border: 2px solid red; */
 }
