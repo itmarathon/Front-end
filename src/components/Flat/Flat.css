@@ -1,0 +1,33 @@
+.WrapFlat {
+  display: inline-block;
+  width: 33.33333%;
+  margin-top: 15px;
+  border: 1px solid red;
+}
+
+.Flat {
+  display: inline-block;
+  padding: 10px;
+  background-color: #cccccc;
+  border: 2px solid black;
+}
+
+p {
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
+
+.button {
+  float: right;
+  width: 120px;
+  height: 30px;
+  background-color: tomato;
+  border: 1px solid black;
+  font-size: 14px;
+  color: white;
+}

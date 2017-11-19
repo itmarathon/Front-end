@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from '../Button/';
+import './Flat.css';
 
 const Flat = ({
   img,
@@ -9,13 +11,16 @@ const Flat = ({
   price,
   type,
 }) => (
-  <div className="Flat">
-    <img src={img} alt={title} />
-    <p>{title}</p>
-    <p>Город: {city}</p>
-    <p>Комнат: {rooms}</p>
-    <p>Цена: {price}</p>
-    <p>Тип: {type}</p>
+  <div className="WrapFlat">
+    <div className="Flat">
+      <img src={img} alt={title} />
+      <p>{title}</p>
+      <p>Город: {city}</p>
+      <p>Комнат: {rooms}</p>
+      <p>Цена: {price}</p>
+      <p>Тип: {type}</p>
+      <Button label="Подробнее..." />
+    </div>
   </div>
 );
 
@@ -30,6 +35,6 @@ Flat.propTypes = {
 
 Flat.defaultProps = {
   img: '/tmp.jpg',
-}
+};
 
 export default Flat;
