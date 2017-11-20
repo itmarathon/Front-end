@@ -8,8 +8,8 @@
 .App {
   /* z-index: 10; */
   text-align: center;
-  background-color: #CFE7FF;
-  min-height: 100vh;
+  background-color: white;
+  min-height: calc(100vh - 64px);
   margin: 0;
   padding: 0px;
   position: relative;
@@ -20,8 +20,6 @@
 #indent {
   padding-bottom: 40px
 }
-
-
 
 /*
 .App p {

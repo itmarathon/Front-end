@@ -1,23 +1,26 @@
-.wrapHeader {
-  height: 40px;
-  background-color: #5B6D7F;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: #CFE7FF ;
+a {
+  color: white;
 }
-.logo {
-  margin-left: 50px;
+a:hover {
+  color: black;
 }
-.sign {
-  margin-right: 50px;
+.ui.menu {
+  background-color: tomato;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: 50px;
 }
-.sign a {
-  color: #CFE7FF;
-  text-decoration: none;
-  padding-right: 5px;
+.logoTop {
+  margin-left: 30px;
+  font-size: 1.5em;
+  margin-top: 0;
+  padding-top: 0;
 }
-.signUp {
-  margin-left: 5px;
+.ui.button {
+  background: #21ba45;
+}
+.ui.menu .menu {
+  border: 0;
+  margin-top: -2px;
+  border-width: 0;
 }

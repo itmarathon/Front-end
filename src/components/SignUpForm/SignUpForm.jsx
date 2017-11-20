@@ -4,11 +4,8 @@ import { Form, Button, Label, Icon } from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from '../InlineError/InlineError';
 import Styles from '../SignInForm/SignInForm.css';
-import Api from '../../services/api';
 
-const setFlatsAction = flats => ({ type: 'SET_FLATS', payload: flats });
-
-class SignInForm extends React.Component {
+class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -26,14 +23,11 @@ class SignInForm extends React.Component {
   });
 
   onSubmit = () => {
-    // const errors = this.validate(this.state.data);
-    // this.setState({ errors });
-    // if (Object.keys(errors).length === 0) {
-    //   this.props.submit(this.state.data);
-    // }
-    Api.getRentalTypes().then(() => {
-      dispatch(setRentalTypesAction(types));
-    });
+    const errors = this.validate(this.state.data);
+    this.setState({ errors });
+    if (Object.keys(errors).length === 0) {
+      this.props.submit(this.state.data);
+    }
   };
 
   validate = (data) => {
@@ -76,9 +70,9 @@ class SignInForm extends React.Component {
         </Form.Field>
         <Form.Field>
           <Button compact animated color="green">
-            <Button.Content visible>Войти</Button.Content>
-            <Button.Content hidden>
-              <Icon name="right arrow" />
+            <Button.Content visible>Зарегистрироваться</Button.Content>
+            <Button.Content hidden>Войти
+              <Icon color="green" />
             </Button.Content>
           </Button>
         </Form.Field>
@@ -87,8 +81,9 @@ class SignInForm extends React.Component {
   }
 }
 
-SignInForm.propTypes = {
-  // submit: PropTypes.func.isRequired,
+SignUpForm.propTypes = {
+  submit: PropTypes.func.isRequired,
 };
 
-export default SignInForm;
+export default SignUpForm;
+
