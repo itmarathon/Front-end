@@ -39,8 +39,22 @@ const getFlats = async () => {
   return data.apartments;
 };
 
+const getFlat = async (id) => {
+  let response;
+
+  try {
+    response = await fetch(`${apiUrl}/api/apartment/${id}`);
+  } catch (e) {
+    console.error(e);
+  }
+
+  const { data } = await response.json();
+  return data.apartments;
+};
+
 export default {
   getCities,
   getRentalTypes,
   getFlats,
+  getFlat,
 };
