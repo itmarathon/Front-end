@@ -10,6 +10,7 @@ const Flat = ({
   rooms,
   price,
   type,
+  id,
 }) => (
   <div className="WrapFlat">
     <div className="Flat">
@@ -19,7 +20,7 @@ const Flat = ({
       <p>Комнат: {rooms}</p>
       <p>Цена: {price}</p>
       <p>Тип: {type}</p>
-      <Button label="Подробнее..." />
+      <a href={`/flats/${id}`}><Button label="Подробнее..." /></a>
     </div>
   </div>
 );
@@ -31,6 +32,7 @@ Flat.propTypes = {
   rooms: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 Flat.defaultProps = {
