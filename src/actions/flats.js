@@ -7,9 +7,9 @@ const getFlatsSuccessAction = () => ({ type: 'GET_FLATS_SUCCESS' });
 const setCitiesAction = cities => ({ type: 'SET_CITIES_LIST', payload: cities });
 const setRentalTypesAction = cities => ({ type: 'SET_RENTAL_TYPES_LIST', payload: cities });
 
-export const getFlats = () => (dispatch) => {
+export const getFlats = (sorting) => (dispatch) => {
   dispatch(getFlatsRequestAction());
-  return Api.getFlats().then(flats => {
+  return Api.getFlats(sorting).then(flats => {
     const adaptedFlats = flatsAdapter(flats);
     dispatch(setFlatsAction(adaptedFlats));
     dispatch(getFlatsSuccessAction());
