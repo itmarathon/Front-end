@@ -12,14 +12,16 @@ const FlatFullDescription = ({
   createdDate,
   photos,
 }) => (
-  <div className="Flat">
-    {photos && photos.map(photo => <img src={photo} alt={photo} />)};
+  <div className="FlatPage">
+    <div className="FlatPage-photos">
+      {photos && photos.map(photo => <img src={photo} alt={photo} />)}
+    </div>
     <p>Город: {city}</p>
     <p>Комнат: {rooms}</p>
     <p>Цена: {price}</p>
     <p>Тип: {type}</p>
     <p>Описание: {description}</p>
-    <p>Ссылка на оригинал: {linkToOrigin}</p>
+    <p>Ссылка на оригинал: <a href={linkToOrigin}>{linkToOrigin}</a></p>
     <p>Дата: {createdDate}</p>
   </div>
 );

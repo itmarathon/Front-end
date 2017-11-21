@@ -1,0 +1,11 @@
+.FlatPage-photos {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.FlatPage-photos img {
+  margin: 0 10px;
+}
