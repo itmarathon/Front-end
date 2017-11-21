@@ -20,7 +20,7 @@ class FlatPage extends Component {
 
     return (
       <div>
-        { isLoading ? 'Loading...' : <FlatFullDescription flat={flat} /> }
+        { isLoading ? 'Loading...' : <FlatFullDescription {...flat} /> }
       </div>
     );
   }

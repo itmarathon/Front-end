@@ -49,7 +49,7 @@ const getFlat = async (id) => {
   }
 
   const { data } = await response.json();
-  return data.apartments;
+  return data.apartment;
 };
 
 export default {
