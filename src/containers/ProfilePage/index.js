@@ -1,3 +1,3 @@
-// import ProfilePage from '../ProfilePage/ProfilePage';
-//
-// export default ProfilePage;
+import ProfilePage from './ProfilePage';
+
+export default ProfilePage;
