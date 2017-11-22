@@ -30,7 +30,7 @@ const getFlats = async (sorting) => {
   let response;
 
   try {
-    response = await fetch(`${apiUrl}/api/apartment?all=true&page=1&perPage=2&sortBy=createdDate&sortType=${sorting}`);
+    response = await fetch(`${apiUrl}/api/apartment?all=true&page=1&perPage=20&sortBy=createdDate&sortType=${sorting}`);
   } catch (e) {
     console.error(e);
   }
