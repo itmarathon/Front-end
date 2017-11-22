@@ -8,10 +8,10 @@
 .App {
   /* z-index: 10; */
   text-align: center;
-  background-color: white;
-  min-height: calc(100vh - 64px);
-  margin: 0;
-  padding: 0px;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: -40px auto 0;
+  padding: 55px 0 0 0;
   position: relative;
   overflow: hidden;
   /* font-size: 0; */
@@ -20,6 +20,8 @@
 #indent {
   padding-bottom: 40px
 }
+
+
 
 /*
 .App p {
