@@ -8,11 +8,11 @@ const Filters = ({
 }) => (
   <div className="Filters">
     <form onChange={onChange}>
-      Где:
+      <span>Где: </span>
       <select name="city">
         {cities.map(city => <option key={city}>{city}</option>)}
       </select>
-      Тип:
+      <span> Тип: </span>
       <select name="type">
         {rentalTypes.map(city => <option key={city}>{city}</option>)}
       </select>

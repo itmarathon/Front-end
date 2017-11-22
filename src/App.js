@@ -14,8 +14,8 @@ const store = configureStore();
 const App = () => (
   <Provider store={store}>
     <div>
+      <Header />
       <div className="App">
-        <Header />
         <Route path="/" exact component={HomePage} />
         <Route path="/sign-in" exact component={SignInPage} />
         <Route path="/flats/:id" exact component={FlatPage} />

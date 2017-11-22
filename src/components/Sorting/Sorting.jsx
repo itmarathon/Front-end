@@ -10,10 +10,10 @@ const Sorting = ({
   onClick,
 }) => (
   <div className="Sorting">
-    Сортировать по:
-    <a className={sortType === 'asc' ? 'Sorting-active' : ''} onClick={() => onClick('asc')}> возврастанию</a>
+    Показывать сперва:
+    <a className={sortType === 'asc' ? 'Sorting-active' : ''} onClick={() => onClick('asc')}> старые</a>
     /
-    <a className={sortType === 'desc' ? 'Sorting-active' : ''} onClick={() => onClick('desc')}>убыванию</a>
+    <a className={sortType === 'desc' ? 'Sorting-active' : ''} onClick={() => onClick('desc')}>свежие</a>
   </div>
 );
 

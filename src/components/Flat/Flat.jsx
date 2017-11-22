@@ -14,7 +14,9 @@ const Flat = ({
 }) => (
   <div className="WrapFlat">
     <div className="Flat">
-      <img src={img} alt={title} />
+      <div className="WrapImg">
+        <img src={img} alt={title} />
+      </div>
       <p>{title}</p>
       <p>Город: {city}</p>
       <p>Комнат: {rooms}</p>

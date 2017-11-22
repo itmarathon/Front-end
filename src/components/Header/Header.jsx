@@ -7,7 +7,7 @@ const Header = () => (
   <div className="wrapHeader">
     <div className="logo"><Link to="/">IT-Marathon</Link></div>
     <div className="sign">
-      <p>Регистрация</p>
+      <span>Регистрация</span>
       <span>/</span>
       <Link to="/sign-in">Вход</Link>
     </div>

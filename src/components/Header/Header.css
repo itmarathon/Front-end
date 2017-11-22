@@ -6,10 +6,12 @@
   justify-content: space-between;
   align-items: center;
   color: white ;
-  margin-bottom: 15px;
 }
 .logo {
   margin-left: 50px;
+}
+.logo a {
+  color: white;
 }
 .sign {
   margin-right: 50px;

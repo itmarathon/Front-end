@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './FlatFullDescription.css';
+import Button from '../Button/';
 
 const FlatFullDescription = ({
   city,
@@ -12,17 +13,19 @@ const FlatFullDescription = ({
   createdDate,
   photos,
 }) => (
-  <div className="FlatPage">
-    <div className="FlatPage-photos">
+  <div className="FlatFullDescription">
+    <div className="FlatFullDescription-photos">
       {photos && photos.map(photo => <img src={photo} alt={photo} />)}
     </div>
-    <p>Город: {city}</p>
-    <p>Комнат: {rooms}</p>
-    <p>Цена: {price}</p>
-    <p>Тип: {type}</p>
-    <p>Описание: {description}</p>
-    <p>Ссылка на оригинал: <a href={linkToOrigin}>{linkToOrigin}</a></p>
-    <p>Дата: {createdDate}</p>
+    <div className="WrapData">
+      <p className="Description">{description}</p>
+      <p>Город: {city}</p>
+      <p>Комнат: {rooms}</p>
+      <p>Цена: {price}</p>
+      <p>Тип: {type}</p>
+      <p>Дата размещения: {createdDate && createdDate.split('T')[0]}</p>
+      <a href={linkToOrigin}><Button label="К источнику" /></a>
+    </div>
   </div>
 );
 

@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => (
   <div className="footer">
-    <p>Главная</p>
+    <p>Осенний IT-марафон от *instinctools, 2017 г.</p>
   </div>
 );
 

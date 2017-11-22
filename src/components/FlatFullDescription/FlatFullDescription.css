@@ -1,4 +1,9 @@
-.FlatPage-photos {
+.FlatFullDescription {
+  width: auto;
+  font-size: 14px;
+}
+
+.FlatFullDescription-photos {
   display: flex;
   align-items: center;
   overflow-x: scroll;
@@ -6,6 +11,23 @@
   white-space: nowrap;
 }
 
-.FlatPage-photos img {
-  margin: 0 10px;
+.FlatFullDescription-photos img {
+  margin: 0 5px;
+}
+
+.WrapData {
+  max-width: 1000px;
+  margin: 15px 15px 0;
+  padding-left: 30px;
+  overflow: hidden;
+}
+
+.FlatFullDescription .Description {
+  font-size: 20px;
+}
+
+.FlatFullDescription a {
+  text-overflow: clip;
+  float: left;
+  margin-top: 10px;
 }
