@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './containers/HomePage';
+import FlatPage from './containers/FlatPage';
 import SignInPage from './containers/SignInPage';
 import configureStore from './store/configureStore';
 
@@ -17,6 +18,7 @@ const App = () => (
         <Header />
         <Route path="/" exact component={HomePage} />
         <Route path="/sign-in" exact component={SignInPage} />
+        <Route path="/flats/:id" exact component={FlatPage} />
         <div id="indent" />
       </div>
       <Footer />
