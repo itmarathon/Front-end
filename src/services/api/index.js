@@ -26,11 +26,11 @@ const getRentalTypes = async () => {
   return data.rentalTypes;
 };
 
-const getFlats = async () => {
+const getFlats = async (sorting) => {
   let response;
 
   try {
-    response = await fetch(`${apiUrl}/api/apartment?all=true&page=1&perPage=20`);
+    response = await fetch(`${apiUrl}/api/apartment?all=true&page=1&perPage=20&sortType=${sorting}`);
   } catch (e) {
     console.error(e);
   }

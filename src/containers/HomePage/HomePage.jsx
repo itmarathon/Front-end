@@ -5,10 +5,12 @@ import { bindActionCreators } from 'redux';
 
 import * as Actions from '../../actions/flats';
 import * as FiltersActions from '../../actions/filters';
+import * as SortingActions from '../../actions/sorting';
 
 import {
   Filters,
   FlatList,
+  Sorting,
 } from '../../components';
 
 class HomePage extends Component {
@@ -48,6 +50,8 @@ class HomePage extends Component {
       rentalTypes,
       filters,
       isLoading,
+      sortType,
+      setSorting,
     } = this.props;
 
     const filtredFlats = this.filter(flats, filters);
@@ -59,6 +63,10 @@ class HomePage extends Component {
           rentalTypes={rentalTypes}
           onChange={this.handlerFiltersChange}
           onSubmit={this.handleFilterSubmit}
+        />
+        <Sorting
+          sortType={sortType}
+          onClick={setSorting}
         />
         { isLoading ? 'Loading...' : <FlatList flats={filtredFlats} /> }
       </div>
@@ -72,6 +80,7 @@ const mapStateToProps = state => ({
   cities: state.lists.cities,
   rentalTypes: state.lists.rentalTypes,
   filters: state.filters,
+  sortType: state.sorting,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
@@ -79,6 +88,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   getRentalTypes: Actions.getRentalTypes,
   getFlats: Actions.getFlats,
   setFilter: FiltersActions.setFilter,
+  setSorting: SortingActions.setSorting,
 }, dispatch);
 
 HomePage.propTypes = {
@@ -87,15 +97,18 @@ HomePage.propTypes = {
   cities: PropTypes.arrayOf(PropTypes.object).isRequired,
   rentalTypes: PropTypes.arrayOf(PropTypes.object).isRequired,
   filters: PropTypes.shape(PropTypes.object),
+  sortType: PropTypes.string,
   getCities: PropTypes.func.isRequired,
   getRentalTypes: PropTypes.func.isRequired,
   getFlats: PropTypes.func.isRequired,
   setFilter: PropTypes.func.isRequired,
+  setSorting: PropTypes.func.isRequired,
 };
 
 HomePage.defaultProps = {
   flats: [],
   filters: {},
+  sortType: 'desc',
 };
 
 export default connect(
