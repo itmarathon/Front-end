@@ -1,11 +1,12 @@
 .wrapHeader {
   height: 40px;
-  background-color: #5B6D7F;
+  background-color: tomato;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: #CFE7FF ;
+  color: white ;
+  margin-bottom: 15px;
 }
 .logo {
   margin-left: 50px;
@@ -14,7 +15,7 @@
   margin-right: 50px;
 }
 .sign a {
-  color: #CFE7FF;
+  color: white;
   text-decoration: none;
   padding-right: 5px;
 }
