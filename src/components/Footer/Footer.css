@@ -1,13 +1,14 @@
 div .footer {
   z-index: 100;
   display: block;
+  /* display: none; */
   position: absolute;
   height: 40px;
   width: 100%;
   margin-top: -40px;
   padding: 0 0 20px 20px;
-  background-color: #5B6D7F;
-  color: #CFE7FF;
-  font-size: 16px;
+  background-color: tomato;
+  color: white;
+  font-size: 14px;
   /* border: 2px solid red; */
 }
