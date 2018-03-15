@@ -5,9 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import * as FlatActions from '../../actions/flat';
 
-import {
-  FlatFullDescription,
-} from '../../components';
+import { FlatFullDescription } from '../../components';
 
 class FlatPage extends Component {
   componentDidMount() {
